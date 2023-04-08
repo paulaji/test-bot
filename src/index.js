@@ -22,19 +22,20 @@ client.on("interactionCreate", (interaction) => {
   if (interaction.commandName === "ping") {
     interaction.reply("pong");
   }
+
+  // functions
+  if (interaction.commandName === "add") {
+    const num1 = interaction.options.get("first-number")?.value;
+    const num2 = interaction.options.get("second-number")?.value;
+    interaction.reply(`sum equals ${num1 + num2}`);
+  }
+
+  // character
   if (interaction.commandName === "nariko") {
     interaction.reply(
       `Hailing from the LAND OF RISING SUN, 🈹 Nariko 🈯 is an expert martial artist, protecting her clan from nether clans.
       A true-warrior! 🎴`
     );
-  }
-  if (interaction.commandName === "who are you") {
-    interaction.reply(
-      "I am thankanchettan! A robot which will automatically respond to your texts!"
-    );
-  }
-  if (interaction.commandName === "how old are you") {
-    interaction.reply("I am 1 day old! But don't ask a robot it's age :)");
   }
 });
 
