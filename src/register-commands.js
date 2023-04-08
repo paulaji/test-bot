@@ -14,48 +14,54 @@ const commands = [
   //     name: "nariko",
   //     description: "character",
   //   },
+  // {
+  //   name: "add",
+  //   description: "adds two numbers",
+  //   options: [
+  //     {
+  //       name: "first-number",
+  //       description: "the first number",
+  //       type: ApplicationCommandOptionType.Number,
+  //       required: true,
+  //       choices: [
+  //         {
+  //           name: "five",
+  //           value: 5,
+  //         },
+  //         {
+  //           name: "ten",
+  //           value: 10,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       name: "second-number",
+  //       description: "the second number",
+  //       type: ApplicationCommandOptionType.Number,
+  //       required: true,
+  //       choices: [
+  //         {
+  //           name: "five",
+  //           value: 5,
+  //         },
+  //         {
+  //           name: "ten",
+  //           value: 10,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
-    name: "add",
-    description: "adds two numbers",
-    options: [
-      {
-        name: "first-number",
-        description: "the first number",
-        type: ApplicationCommandOptionType.Number,
-        required: true,
-        choices: [
-          {
-            name: "five",
-            value: 5,
-          },
-          {
-            name: "ten",
-            value: 10,
-          },
-        ],
-      },
-      {
-        name: "second-number",
-        description: "the second number",
-        type: ApplicationCommandOptionType.Number,
-        required: true,
-        choices: [
-          {
-            name: "five",
-            value: 5,
-          },
-          {
-            name: "ten",
-            value: 10,
-          },
-        ],
-      },
-    ],
+    name: "embed",
+    description: "Sends an embed",
   },
 ];
 
 const rest = new REST({ version: "10" });
 rest.setToken(process.env.TOKEN);
+
+// inorder to regiister slash commands
 
 (async () => {
   try {
